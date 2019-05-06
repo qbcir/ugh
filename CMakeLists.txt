@@ -5,7 +5,7 @@ INCLUDE (CMakeMacro.cmake)
 USE_PACKAGE (ev ev.h) 
 USE_PACKAGE (Judy Judy.h)
 
-SET (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -export-dynamic")
+SET (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -export-dynamic -no-pie")
 SET (EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
 
 AUX_SOURCE_DIRECTORY (ugh/aux SRC_AUX)
